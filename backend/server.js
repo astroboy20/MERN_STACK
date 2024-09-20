@@ -26,4 +26,4 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-//go to server.js and add a dev data- "dev": "nodemon server.js"
+//go to server.js and add a dev data- "dev": "nodemon server.js then you can now run npm run dev"
