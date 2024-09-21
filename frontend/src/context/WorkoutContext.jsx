@@ -14,6 +14,10 @@ export const workoutsReducer = (state, action) => {
       return {
         workouts: [action.payload, ...state.workouts],
       };
+    case "DELETE_WORKOUT":
+      return {
+        workouts: state.workouts.filter((w) => w._id !== action.payload._id),
+      };
     default:
       return state;
   }
@@ -22,7 +26,7 @@ export const workoutsReducer = (state, action) => {
 // Provider component to wrap the app with context
 export const WorkoutContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(workoutsReducer, {
-    workouts: null
+    workouts: null,
   });
 
   return (
