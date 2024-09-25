@@ -27,7 +27,6 @@ const WorkoutDetails = ({ workout }) => {
       <p>
         {formartDistanceNow(new Date(workout.createdAt), { addSuffix: true })}
       </p>
-      {/* <span className="" onClick={() => handleClick(workout?._id)}>delete</span> */}
       <span
         className="material-symbols-outlined"
         onClick={() => handleClick(workout?._id)}
